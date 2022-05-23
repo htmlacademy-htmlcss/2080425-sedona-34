@@ -59,13 +59,13 @@
                 <ul class="catalog-filter-list">
                     <li class="catolog-filter-item">
                         <label class="control">
-                        <input class="control-input" type="checkbox" name="swimming-pool">
+                        <input class="control-input" type="checkbox" name="swimming-pool" checked>
                         Бассейн
                         </label>
                     </li>
                     <li class="catolog-filter-item">
                         <label class="control">
-                        <input class="control-input" type="checkbox" name="parking">
+                        <input class="control-input" type="checkbox" name="parking" checked>
                         Паровка
                         </label>
                     </li>
@@ -75,9 +75,29 @@
                         Wi-Fi
                         </label>
                     </li>
+                </ul>
             </fieldset>
             <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Тип Жилья</legend>
+                <ul class="catalog-filter-list">
+                    <li class="catalog-filter-item">
+                        <label class="control">
+                            <input class="control-input" type="radio" name="accommodation-type" value="hotel" checked>
+                            Гостиница
+                        </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                        <label class="control">
+                            <input class="control-input" type="radio" name="accommodation-typ" value="motel">
+                            Мотель
+                        </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                        <label class="control">
+                            <input class="control-input" type="radio" name="accommodation-typ" value="apartment">
+                            Апартаменты
+                        </label>
+                    </li>
                 </ul>
             </fieldset>
             <button class="button" type="submit">Применить</button>
