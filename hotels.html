@@ -11,30 +11,30 @@
   <a href="index.html" class="logo">
     <img src="logo.svg" alt="логотип сайта">
   </a>
-<nav class="page-navigation">
-<ul class="navigation-list">
-  <li class="navigation-item">
-    <a class="navigation-link" href="index.html">Главная</a>
-  </li>
-  <li class="navigation-item">
-    <a class="navigation-link" href="about.html">О седоне</a>
-  </li>
-  <li class="navigation-item">
-    <a class="navigation-link navigation-link-current" href="#">Гостиницы</a>
-  </li>
-</ul>
-<ul class="navigation-list">
-  <li class="navigation-item">
-    <a class="navigation-link" href="#"><span class="visually-hidden">Поиск</span></a>
-  </li>
-  <li class="navigation-item">
-    <a class="navigation-link" href="#"><span class="visually-hidden">Избранное</span></a>
-  </li>
-  <li class="navigation-item">
-    <a class="navigation-link" href="hotels.html">Хочу сюда!</a>
-  </li>
-</ul>
-</nav>
+  <nav class="page-navigation">
+    <ul class="navigation-list">
+      <li class="navigation-item">
+        <a class="navigation-link" href="index.html">Главная</a>
+      </li>
+      <li class="navigation-item">
+        <a class="navigation-link" href="about.html">О седоне</a>
+      </li>
+      <li class="navigation-item">
+        <a class="navigation-link navigation-link-current">Гостиницы</a>
+      </li>
+    </ul>
+    <ul class="navigation-list">
+      <li class="navigation-item">
+        <a class="navigation-link" href="#"><span class="visually-hidden">Поиск</span></a>
+      </li>
+      <li class="navigation-item">
+        <a class="navigation-link" href="#"><span class="visually-hidden">Избранное</span></a>
+      </li>
+      <li class="navigation-item">
+        <a class="navigation-link" href="#">Хочу сюда!</a>
+      </li>
+    </ul>
+  </nav>
 </header>
 
 <!-- main -->
@@ -127,8 +127,12 @@
                 </dl>
                 <a href="#" class="button hotel-button">ПОДРОБНЕЕ</a>
                 <button class="button button-favourite" type="submit"><samp class="favourite">В ИЗБРАННОЕ</samp></button>
-                <p class="stars">&#9733; &#9733; &#9733; &#9733;</p>
-                <p class="vissually-hidden">4 звезды</p>
+                <ul class="hotel-class" aria-label="Категория отеля">
+                  <li class="star"></li>
+                  <li class="star"></li>
+                  <li class="star"></li>
+                  <li class="star"></li>
+                </ul>
                 <p class="button button-rating">Рейтинг: 8,5</p>
             </li>
             <li class="hotel-card">
@@ -140,8 +144,12 @@
                 </dl>
                 <a href="#" class="button hotel-button">ПОДРОБНЕЕ</a>
                 <button class="button button-favourite-yet" type="submit"><samp class="favourite">В ИЗБРАННОМ</samp></button>
-                <p class="stars">&#9733; &#9733; &#9733; &#9733;</p>
-                <p class="vissually-hidden">4 звезды</p>
+                <ul class="hotel-class" aria-label="Категория отеля">
+                  <li class="star"></li>
+                  <li class="star"></li>
+                  <li class="star"></li>
+                  <li class="star"></li>
+                </ul>
                 <p class="button button-rating">Рейтинг: 9,2</p>
             </li>
             <li class="hotel-card">
@@ -153,8 +161,11 @@
                  </dl>
                  <a href="#" class="button hotel-button">ПОДРОБНЕЕ</a>
                 <button class="button button-favourite" type="submit"><samp class="favourite">В ИЗБРАННОЕ</samp></button>
-                <p class="stars">&#9733; &#9733; &#9733;</p>
-                <p class="vissually-hidden">3 звезды</p>
+                <ul class="hotel-class" aria-label="Категория отеля">
+                  <li class="star"></li>
+                  <li class="star"></li>
+                  <li class="star"></li>
+                </ul>
                 <p class="button button-rating">Рейтинг: 6,9</p>
             </li>
             <li class="hotel-card">
@@ -166,8 +177,10 @@
                 </dl>
                 <a href="#" class="button hotel-button">ПОДРОБНЕЕ</a>
                 <button class="button button-favourite" type="submit"><samp class="favourite">В ИЗБРАННОЕ</samp></button>
-                <p class="stars">&#9733; &#9733;</p>
-                <p class="vissually-hidden">2 звезды</p>
+                <ul class="hotel-class" aria-label="Категория отеля">
+                  <li class="star"></li>
+                  <li class="star"></li>
+                </ul>
                 <p class="button button-rating">Рейтинг: 5,0</p>
             </li>
         </ul>
@@ -177,13 +190,13 @@
                 <a class="pagination-link pagination-current">1</a>
             </li>
             <li class="paggination-item">
-                <a class="pagination-link">2</a>
+                <a class="pagination-link" href="#">2</a>
             </li>
             <li class="paggination-item">
-                <a class="pagination-link">3</a>
+                <a class="pagination-link" href="#">3</a>
             </li>
             <li class="paggination-item">
-                <a class="pagination-link">4</a>
+                <a class="pagination-link" href="#">4</a>
             </li>
             <li class="paggination-item">
                 <a class="pagination-link" href="#" alt="показать все страницы">...</a>
@@ -192,12 +205,11 @@
                 <a class="pagination-link">10</a>
             </li>       
         </ul>
-        <p class="hotel-page-amount">Гостиниц на странице:</p>
-        <ul class="hotel-page-amount-list">
-            <li class="hotel-page-amount-item hotel-page-amount-item-current">4</li>
-            <li class="hotel-page-amount-item">6</li>
-            <li class="hotel-page-amount-item">9</li>
-        </ul>
+        <select class="select-control" aria-label="Гостиниц на странице:">
+          <option value="4">4</option>
+          <option value="6">6</option>
+          <option value="9">9</option>
+      </select>
     </section>
     <article class="newsletter">
         <h2 class="newsletter-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h2>
