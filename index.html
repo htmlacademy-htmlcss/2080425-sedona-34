@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
 
@@ -17,7 +18,7 @@
         <a class="navigation-link navigation-link-current">Главная</a>
       </li>
       <li class="navigation-item">
-        <a class="navigation-link" href="about.html">О седоне</a>
+        <a class="navigation-link" href="#">О седоне</a>
       </li>
       <li class="navigation-item">
         <a class="navigation-link" href="hotels.html">Гостиницы</a>
@@ -31,7 +32,7 @@
         <a class="navigation-link" href="#"><span class="visually-hidden">Избранное</span></a>
       </li>
       <li class="navigation-item">
-        <a class="navigation-link" href="#">Хочу сюда!</a>
+        <a class="navigation-link button" href="#">Хочу сюда!</a>
       </li>
     </ul>
   </nav>
@@ -40,8 +41,10 @@
 <!-- main -->
 <main class="main-index">
   <h1 class="visually-hidden">Отдых в Седоне</h1>
-  <img class="welcome-logo" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в великолепнкю Седону!">
-  <p class="main-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+  <div class="welcome-image">
+    <img class="welcome-logo" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в великолепнкю Седону!">
+  </div>
+  <p class="main-title-heading">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
   <section class="resons">
     <h2 class="reason-intro">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</h2>
     <ol>
@@ -94,7 +97,7 @@
   </section>
   <section class="invite">
     <h2 class="visually-hidden">Найти гостиницу</h2>
-    <p class="invite-title">ЗАИНТЕРЕСОВАЛИСЬ?</p>
+    <p class="main-title-heading">ЗАИНТЕРЕСОВАЛИСЬ?</p>
     <p class="invite-description">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
     <a class="invite-button button" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
   </section>
