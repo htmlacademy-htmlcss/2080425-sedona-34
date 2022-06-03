@@ -75,10 +75,10 @@ body {
 }
 
 .button-rating {
-    text-align: center;
-    text-transform: uppercase;
     color: #333333;
     background-color: #F2F2F2;
+    width: 140px;
+    height: 37px;
 }
 
 .hotel-button {
