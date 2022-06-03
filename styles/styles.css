@@ -61,12 +61,28 @@ body {
 
 .button-action {
     background-color: #82B3D3;
+    font-weight: 700;
 }
 
 .button-transparent {
     background-color: transparent;
     border: none;
     text-decoration: none;
+}
+
+.button-favourite {
+    background-color: #7DB54F;
+}
+
+.button-rating {
+    text-align: center;
+    text-transform: uppercase;
+    color: #333333;
+    background-color: #F2F2F2;
+}
+
+.hotel-button {
+    font-weight: 700;
 }
 
 /* main styles */
@@ -215,3 +231,20 @@ body {
     line-height: 21px;
     color: #333333
 }
+
+.pagination-link {
+    color:#FFFFFF;
+    background-color: #82B3D3;
+    text-decoration: none;
+}
+
+.pagination-current {
+    color:#000000;
+    background-color: #F2F2F2;
+}
+
+.hotels-on-page {
+    font-size: 18px;
+    line-height: 21px;
+}
+
