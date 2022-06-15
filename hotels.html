@@ -47,14 +47,22 @@
           <h1 class="catalog-filter-main">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link" href="index.html"><span class="visually-hidden">Главная</span></a>
+              <a class="breadcrumbs-link" href="index.html">
+                <span class="visually-hidden">Главная</span>
+                <img src="./images/pics/home.svg" height="12px" width="12px">
+              </a>
+            <li class="breadcrumbs-item">
+              <img src="./images/pics/arrow.svg" height="8px" width="5px">
+            </li>
             </li>
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="#">Гостиницы</a>
             </li>
           </ul>
           <!-- <h2 class="visually-hidden">Фильтр для поиска гостиниц</h2> -->
+
           <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="get">
+            <div class="catalog-filter-left">
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Инфраструктура</legend>
               <ul class="catalog-filter-list">
@@ -101,35 +109,58 @@
                 </li>
               </ul>
             </fieldset>
+            </div>
             <!-- здесь будет фильтр по стоимости -->
-            <button class="button button-action" type="submit">Применить</button>
-            <button class="button-transparent" type="reset">Сбросить</button>
+            <div class="price-and-buttons">
+              <div class="price">
+                <img src="./images/price.png" width="288px" height="148px">
+              </div>
+              <div class="filter-buttons">
+                <button class="button button-action" type="submit">Применить</button>
+                <button class="button-transparent" type="reset">Сбросить</button>
+              </div>
+            </div>
           </form>
         </section>
         <h2 class="visually-hidden">Результаты поиска</h2>
-        <p class="search-declaration">НАЙДЕНО ГОСТИНИЦ <span class="search-value">38</span></p>
+        <div class="catalog-visualization">
+        <p class="search-declaration">НАЙДЕНО ГОСТИНИЦ: <span class="search-value">38</span></p>
+        <div class="select-control-method">
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвые</option>
           <option value="expensive">Сначала дорогие</option>
           <option value="popular">Сначала популярные</option>
         </select>
+      </div>
         <!-- способ отображение -->
-        <a href="#" class="button-transparent button-border"><span class="vissually-hidden">Показать карточки</span></a>
-        <a href="#" class="button-transparent"><span class="vissually-hidden">Показать карточки крупно</span></a>
-        <a href="#" class="button-transparent"><span class="vissually-hidden">Показать список</span></a>
+        <div class="view-type">
+        <a href="#" class="button-transparent button-view">
+          <img src="./images/pics/grid-view.svg" width="16px" height="14px"><span class="vissually-hidden">Показать карточки</span></a>
+        <a href="#" class="button-transparent button-view">
+          <img src="./images/pics/slideshow-view.svg" width="16px" height="14px">
+          <span class="vissually-hidden">Показать карточки крупно</span>
+        </a>
+        <a href="#" class="button-transparent button-view">
+          <img src="./images/pics/list-view.svg" width="16px" height="14px">
+          <span class="vissually-hidden">Показать список</span></a>
+        </div>
+      </div>
         <!-- Карточки отелей -->
 
         <ul class="hotel-list">
           <li class="hotel-card">
             <img src="images/hotels/amara-resort-spa.jpg" class="hotel-img-mini" width="300" height="210"
-              alt="пейзаж каньона">
+              alt="пейзаж каньона.">
             <h3 class="hotel-title">Amara Resort & Spa</h3>
             <dl class="hotel-type-cost">
               <dt class="hotel-type-cost-value">Гостиница</dt>
               <dd class="hotel-type-cost-value">От 4000 &#8381;</dd>
             </dl>
+            <div class="hotel-buttons">
             <a href="#" class="button hotel-button">ПОДРОБНЕЕ</a>
             <button class="button button-action" type="submit">В ИЗБРАННОЕ</button>
+          </div>
+          <div class="hotel-grade">
             <ul class="hotel-class" aria-label="Категория отеля">
               <li class="star"></li>
               <li class="star"></li>
@@ -137,10 +168,11 @@
               <li class="star"></li>
             </ul>
             <p class="button button-rating">Рейтинг: 8,5</p>
+          </div>
           </li>
           <li class="hotel-card">
             <img src="images/hotels/villas-at-poco-diablo.jpg" class="hotel-img-mini" width="300" height="210"
-              alt="пейзаж каньона">
+              alt="пейзаж каньона.">
             <h3 class="hotel-title">Villas at Poco Diablo</h3>
             <dl class="hotel-type-cost">
               <dt class="hotel-type-cost-value">Гостиница</dt>
@@ -158,7 +190,7 @@
           </li>
           <li class="hotel-card">
             <img src="images/hotels/desert-quail-inn.jpg" class="hotel-img-mini" width="300" height="210"
-              alt="пейзаж каньона">
+              alt="пейзаж каньона.">
             <h3 class="hotel-title">Desert Quail Inn</h3>
             <dl class="hotel-type-cost">
               <dt class="hotel-type-cost-value">Гостиница</dt>
@@ -175,7 +207,7 @@
           </li>
           <li class="hotel-card">
             <img src="images/hotels/greentree-inn.jpg" class="hotel-img-mini" width="300" height="210"
-              alt="пейзаж каньона">
+              alt="пейзаж каньона.">
             <h3 class="hotel-title">GreenTree Inn</h3>
             <dl class="hotel-type-cost">
               <dt class="hotel-type-cost-value">Гостиница</dt>
@@ -205,7 +237,7 @@
             <a class="pagination-link" href="#">4</a>
           </li>
           <li class="paggination-item">
-            <a class="pagination-link" href="#" alt="показать все страницы">...</a>
+            <a class="pagination-link" href="#" alt="показать все страницы.">...</a>
           </li>
           <li class="paggination-item">
             <a class="pagination-link" href="#">10</a>
@@ -260,8 +292,8 @@
         <div class="htmlacademy-link">
           <!-- <h2 class="visually-hidden">Сделано в HTML Academy</h2> -->
           <a class="htmlacademy-url" href="https://htmlacademy.ru"><img src="images/html-academy.svg" width="115"
-              height="33" alt="логотип HTML Academy"></a>
-          </div>
+              height="33" alt="логотип HTML Academy."></a>
+        </div>
       </footer>
     </div>
   </body>
