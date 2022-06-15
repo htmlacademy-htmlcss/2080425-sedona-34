@@ -63,52 +63,52 @@
 
           <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="get">
             <div class="catalog-filter-left">
-            <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Инфраструктура</legend>
-              <ul class="catalog-filter-list">
-                <li class="catolog-filter-item">
-                  <label class="text-description">
-                    <input class="control-input" type="checkbox" name="swimming-pool" checked>
-                    Бассейн
-                  </label>
-                </li>
-                <li class="catolog-filter-item">
-                  <label class="text-description">
-                    <input class="control-input" type="checkbox" name="parking" checked>
-                    Паровка
-                  </label>
-                </li>
-                <li class="catolog-filter-item">
-                  <label class="text-description">
-                    <input class="control-input" type="checkbox" name="wifi">
-                    Wi-Fi
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Тип Жилья</legend>
-              <ul class="catalog-filter-list">
-                <li class="catalog-filter-item">
-                  <label class="text-description">
-                    <input class="control-input" type="radio" name="accommodation-type" value="hotel" checked>
-                    Гостиница
-                  </label>
-                </li>
-                <li class="catalog-filter-item">
-                  <label class="text-description">
-                    <input class="control-input" type="radio" name="accommodation-type" value="motel">
-                    Мотель
-                  </label>
-                </li>
-                <li class="catalog-filter-item">
-                  <label class="text-description">
-                    <input class="control-input" type="radio" name="accommodation-type" value="apartment">
-                    Апартаменты
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
+              <fieldset class="catalog-filter-group">
+                <legend class="catalog-filter-title">Инфраструктура</legend>
+                <ul class="catalog-filter-list">
+                  <li class="catolog-filter-item">
+                    <label class="text-description">
+                      <input class="control-input" type="checkbox" name="swimming-pool" checked>
+                      Бассейн
+                    </label>
+                  </li>
+                  <li class="catolog-filter-item">
+                    <label class="text-description">
+                      <input class="control-input" type="checkbox" name="parking" checked>
+                      Паровка
+                    </label>
+                  </li>
+                  <li class="catolog-filter-item">
+                    <label class="text-description">
+                      <input class="control-input" type="checkbox" name="wifi">
+                      Wi-Fi
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="catalog-filter-group">
+                <legend class="catalog-filter-title">Тип Жилья</legend>
+                <ul class="catalog-filter-list">
+                  <li class="catalog-filter-item">
+                    <label class="text-description">
+                      <input class="control-input" type="radio" name="accommodation-type" value="hotel" checked>
+                      Гостиница
+                    </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <label class="text-description">
+                      <input class="control-input" type="radio" name="accommodation-type" value="motel">
+                      Мотель
+                    </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <label class="text-description">
+                      <input class="control-input" type="radio" name="accommodation-type" value="apartment">
+                      Апартаменты
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
             </div>
             <!-- здесь будет фильтр по стоимости -->
             <div class="price-and-buttons">
@@ -124,27 +124,28 @@
         </section>
         <h2 class="visually-hidden">Результаты поиска</h2>
         <div class="catalog-visualization">
-        <p class="search-declaration">НАЙДЕНО ГОСТИНИЦ: <span class="search-value">38</span></p>
-        <div class="select-control-method">
-        <select class="select-control" aria-label="Сортировка">
-          <option value="cheap">Сначала дешёвые</option>
-          <option value="expensive">Сначала дорогие</option>
-          <option value="popular">Сначала популярные</option>
-        </select>
-      </div>
-        <!-- способ отображение -->
-        <div class="view-type">
-        <a href="#" class="button-transparent button-view">
-          <img src="./images/pics/grid-view.svg" width="16px" height="14px"><span class="vissually-hidden">Показать карточки</span></a>
-        <a href="#" class="button-transparent button-view">
-          <img src="./images/pics/slideshow-view.svg" width="16px" height="14px">
-          <span class="vissually-hidden">Показать карточки крупно</span>
-        </a>
-        <a href="#" class="button-transparent button-view">
-          <img src="./images/pics/list-view.svg" width="16px" height="14px">
-          <span class="vissually-hidden">Показать список</span></a>
+          <p class="search-declaration">НАЙДЕНО ГОСТИНИЦ: <span class="search-value">38</span></p>
+          <div class="select-control-method">
+            <select class="select-control" aria-label="Сортировка">
+              <option value="cheap">Сначала дешёвые</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="popular">Сначала популярные</option>
+            </select>
+          </div>
+          <!-- способ отображение -->
+          <div class="view-type">
+            <a href="#" class="button-transparent button-view">
+              <img src="./images/pics/grid-view.svg" width="16px" height="14px"><span class="vissually-hidden">Показать
+                карточки</span></a>
+            <a href="#" class="button-transparent button-view">
+              <img src="./images/pics/slideshow-view.svg" width="16px" height="14px">
+              <span class="vissually-hidden">Показать карточки крупно</span>
+            </a>
+            <a href="#" class="button-transparent button-view">
+              <img src="./images/pics/list-view.svg" width="16px" height="14px">
+              <span class="vissually-hidden">Показать список</span></a>
+          </div>
         </div>
-      </div>
         <!-- Карточки отелей -->
 
         <ul class="hotel-list">
@@ -157,18 +158,18 @@
               <dd class="hotel-type-cost-value">От 4000 &#8381;</dd>
             </dl>
             <div class="hotel-buttons">
-            <a href="#" class="button hotel-button">ПОДРОБНЕЕ</a>
-            <button class="button button-action" type="submit">В ИЗБРАННОЕ</button>
-          </div>
-          <div class="hotel-grade">
-            <ul class="hotel-class" aria-label="Категория отеля">
-              <li class="star"></li>
-              <li class="star"></li>
-              <li class="star"></li>
-              <li class="star"></li>
-            </ul>
-            <p class="button button-rating">Рейтинг: 8,5</p>
-          </div>
+              <a href="#" class="button hotel-button">ПОДРОБНЕЕ</a>
+              <button class="button button-action" type="submit">В ИЗБРАННОЕ</button>
+            </div>
+            <div class="hotel-grade">
+              <ul class="hotel-class" aria-label="Категория отеля">
+                <li class="star"></li>
+                <li class="star"></li>
+                <li class="star"></li>
+                <li class="star"></li>
+              </ul>
+              <p class="button button-rating">Рейтинг: 8,5</p>
+            </div>
           </li>
           <li class="hotel-card">
             <img src="images/hotels/villas-at-poco-diablo.jpg" class="hotel-img-mini" width="300" height="210"
@@ -223,32 +224,36 @@
           </li>
         </ul>
         <p class="visually-hidden">Выбор страницы результата поиска</p>
-        <ul class="pagination">
-          <li class="paggination-item">
-            <a class="pagination-link pagination-current">1</a>
-          </li>
-          <li class="paggination-item">
-            <a class="pagination-link" href="#">2</a>
-          </li>
-          <li class="paggination-item">
-            <a class="pagination-link" href="#">3</a>
-          </li>
-          <li class="paggination-item">
-            <a class="pagination-link" href="#">4</a>
-          </li>
-          <li class="paggination-item">
-            <a class="pagination-link" href="#" alt="показать все страницы.">...</a>
-          </li>
-          <li class="paggination-item">
-            <a class="pagination-link" href="#">10</a>
-          </li>
-        </ul>
-        <p class="text-description">Гостиниц на странице</p>
-        <select class="select-control" aria-label="Гостиниц на странице:">
-          <option value="4">4</option>
-          <option value="6">6</option>
-          <option value="9">9</option>
-        </select>
+        <div class="catalog-bottom-view">
+          <ul class="pagination">
+            <li class="paggination-item">
+              <a class="pagination-link pagination-current">1</a>
+            </li>
+            <li class="paggination-item">
+              <a class="pagination-link" href="#">2</a>
+            </li>
+            <li class="paggination-item">
+              <a class="pagination-link" href="#">3</a>
+            </li>
+            <li class="paggination-item">
+              <a class="pagination-link" href="#">4</a>
+            </li>
+            <li class="paggination-item">
+              <a class="pagination-link" href="#" alt="показать все страницы.">...</a>
+            </li>
+            <li class="paggination-item">
+              <a class="pagination-link" href="#">10</a>
+            </li>
+          </ul>
+          <div class="hotels-on-page">
+            <p class="text-description">Гостиниц на странице</p>
+            <select class="select-control" aria-label="Гостиниц на странице:">
+              <option value="4">4</option>
+              <option value="6">6</option>
+              <option value="9">9</option>
+            </select>
+          </div>
+        </div>
         </section>
         <section class="newsletter">
           <h2 class="main-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h2>

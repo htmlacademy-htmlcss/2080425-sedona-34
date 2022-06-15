@@ -642,6 +642,28 @@ justify-content: space-around;
     display: flex;
 }
 
+.catalog-bottom-view {
+    width: 1056px;
+    margin: 0 72px 25px 72px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.pagination {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 400px;
+    justify-content: space-between;
+}
+
+.pagination-item {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+}
+
 .pagination-link {
     color: #FFFFFF;
     background-color: #82B3D3;
