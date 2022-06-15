@@ -276,6 +276,15 @@ body {
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 29px;
+
+}
+
+.newsletter {
+    max-width: 1200px;
+    height: 411px;
+    padding: 94px 200px 94px 200px;
+    margin: 0 auto 0 auto;
+    text-align: center;
 }
 
 .newsletter-background {
@@ -283,11 +292,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     color: #FFFFFF;
-    background-color: #82B3D3;
-    max-width: 1200px;
-    height: 411px;
-    padding: 94px 200px 94px 200px;
-    margin: 0 auto 0 auto;
 }
 
 .newsletter-form {
@@ -660,6 +664,8 @@ justify-content: space-around;
 .pagination-item {
     width: 60px;
     height: 60px;
+    display: block;
+    background-color: #82B3D3;
     margin: 0;
     padding: 0;
 }
@@ -667,6 +673,7 @@ justify-content: space-around;
 .pagination-link {
     color: #FFFFFF;
     background-color: #82B3D3;
+
     text-decoration: none;
 }
 
