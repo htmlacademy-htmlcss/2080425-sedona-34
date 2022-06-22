@@ -546,7 +546,7 @@ height: 40px;
 .text-description {
     font-size: 18px;
     line-height: 21px;
-    margin: 0;
+    /* margin: 0; */
 }
 
 .search-declaration {
