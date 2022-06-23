@@ -66,7 +66,8 @@ body {
 /* header styles */
 
 img {
-    display: block;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .logo {
@@ -391,6 +392,7 @@ img {
 .social-networks-list {
     display: flex;
     list-style: none;
+    max-width: 170px;
     padding: 0;
     margin: 0;
 }
@@ -456,11 +458,10 @@ img {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 110px;
+    gap: 25px;
     min-height: 21px;
-    justify-content: space-between;
+    justify-content: start;
     margin-bottom: 40px;
-    /* poshemu: ne-poseredine; */
 }
 
 .breadcrumbs-item {
@@ -513,6 +514,10 @@ img {
     justify-content: space-between;
 }
 
+.catolog-filter-item {
+    max-width: 150px;
+}
+
 .catalog-filter-main {
     font-weight: 700;
     font-size: 60px;
@@ -546,7 +551,6 @@ img {
 
 .filter-buttons {
     width: 160px;
-    padding-top: 60px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -599,12 +603,6 @@ img {
     justify-content: space-around;
 
 }
-
-.select-control-method {
-    margin: 0;
-}
-
-
 
 .select-control {
     width: 290px;
@@ -696,7 +694,7 @@ img {
 
 .catalog-bottom-view {
     width: 1056px;
-    margin: 30px 72px 25px 72px;
+    margin: 0 72px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -746,6 +744,10 @@ img {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.hotels-result {
+    padding-bottom: 25px;
 }
 
 .select-control-amount {
