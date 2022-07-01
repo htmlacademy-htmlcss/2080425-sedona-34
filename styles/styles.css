@@ -207,18 +207,8 @@ img {
     margin: 0;
 }
 
-.hotel-button {
-    font-weight: 700;
-    width: 300px;
-    border-radius: 4px;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0;
-}
-
 .button-under {
+    font-weight: 700;
     width: 140px;
     padding: 9px 15px 8px 15px;
 }
@@ -619,52 +609,61 @@ img {
 
 .hotel-list {
     max-width: 1056px;
-    display: flex;
+    /* --flex-- */
+
+    /* display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     list-style: none;
     margin: 0 auto 66px auto;
+    padding: 0; */
+
+    /* --grid-- */
+
+    display: grid;
+    grid-template-columns: 340px 340px 340px;
+    column-gap: 20px;
+    align-items: center;
+    margin: auto;
     padding: 0;
+    padding-bottom: 66px;
 }
 
-.hotel-type-cost {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    color: #333333;
-    width: 300px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-}
-
-.hotel-type-cost-value {
-    width: 140px;
-    margin: 0;
-    padding: 0;
-}
-
-
+/* hotel card grid */
 
 .hotel-card {
-    width: 340px;
-    min-height: 438px;
+    display: grid;
     padding: 20px;
+    grid-template-columns: 140px 140px;
+    column-gap: 20px;
+    row-gap: 16px;
+}
+
+.hotel-img-mini {
+    grid-column: 1/-1;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    padding: 0;
 }
 
 .hotel-title {
+    grid-row: 2/3;
+    grid-column: 1/-1;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
     margin: 0;
     padding: 0;
+}
+
+.hotel-type-cost-value {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    width: 140px;
+    margin: 0;
+    padding: 0;
+    color: #333333;
 }
 
 .hotel-class {
@@ -682,14 +681,6 @@ img {
     width: 18px;
     height: 17px;
     background-color: #83B3D3;
-}
-
-.hotel-grade {
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
 }
 
 .catalog-bottom-view {
@@ -758,4 +749,31 @@ img {
     line-height: 21px;
     color: #333333;
     margin: 0;
+}
+
+
+/* test */
+
+.hotel-card1 {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 140px 140px;
+    column-gap: 20px;
+    row-gap: 16px;
+}
+
+.hotel-img-mini1 {
+    grid-column: 1/-1;
+    margin: 0;
+    padding: 0;
+}
+
+.hotel-title1 {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
 }
