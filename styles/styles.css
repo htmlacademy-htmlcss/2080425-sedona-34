@@ -129,11 +129,19 @@ img {
 
 .navigation-list-additional .navigation-item:nth-child(2) .navigation-link::after {
     content: "12";
+    color: #FFFFFF;
     position: relative;
     font-size: 10px;
-    line-height: 13px;
+    line-height: 10px;
+    font-weight: 400;
     top: -10px;
     right: -13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
     background-size: 20px 20px;
     background-color: #7DB54F;
 }
@@ -150,7 +158,7 @@ img {
     text-decoration: none;
     color: #000000;
     cursor: pointer;
-    padding: 20px 17px 20px 17px;
+    padding: 20px 17px 18px 17px;
 }
 
 .navigation-list-additional .navigation-item:nth-child(1) .navigation-link {
@@ -163,6 +171,11 @@ img {
     background-image: url("../images/pics/favorite.svg");
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.navigation-link-current {
+    border-bottom: 2px solid #756257;
+
 }
 
 .reason-intro {
@@ -331,11 +344,12 @@ img {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-
+    position: relative;
 }
 
 .reason-container,
-.reason-item {
+.reason-item,
+.reason-subitem {
     display: flex;
     flex-wrap: wrap;
 }
@@ -351,6 +365,39 @@ img {
 }
 
 
+.reason-subitem {
+    width: 400px;
+    min-height: 384px;
+    padding: 121px 85px 20px 85px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.reasons .reason-subitem:nth-child(1):before {
+    content: url("../images/pics/house.svg");
+    position: absolute;
+    top: 80px;
+    width: 75px;
+    height: 72px;
+}
+
+.reasons .reason-subitem:nth-child(2):before {
+    content: url("../images/pics/food.svg");
+    position: absolute;
+    top: 82px;
+    width: 74px;
+    height: 70px;
+}
+
+.reasons .reason-subitem:nth-child(3):before {
+    content: url("../images/pics/present.svg");
+    position: absolute;
+    top: 78px;
+    width: 64px;
+    height: 72px;
+}
 
 .invite-description {
     margin: 0 304px 55px 304px;
@@ -409,8 +456,48 @@ img {
     position: relative;
 }
 
-.reasons .reason-container:first-child .reason-item .reason-title::after {
+.reasons .reason-container:nth-child(1) > .reason-item > .reason-title::after {
     content: "- №1 -";
+    position: absolute;
+    bottom: -50px;
+    left: 40%;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.reasons .reason-container:nth-child(2) > .reason-item > .reason-title::after {
+    content: "- №2 -";
+    position: absolute;
+    bottom: -50px;
+    left: 40%;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.reasons > .reason-item:nth-child(3) > .reason-title::after {
+    content: "- №3 -";
+    position: absolute;
+    bottom: -50px;
+    left: 40%;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.reasons > .reason-item:nth-child(4) > .reason-title::after {
+    content: "- №4 -";
+    position: absolute;
+    bottom: -50px;
+    left: 40%;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.reasons > .reason-item:nth-child(5) > .reason-title::after {
+    content: "- №5 -";
     position: absolute;
     bottom: -50px;
     left: 40%;
@@ -425,6 +512,7 @@ img {
 }
 
 .main-reason-img {
+    gap: 81px;
     color: #FFFFFF;
     background-color: #83B3D3;
 }
@@ -688,17 +776,16 @@ img {
     padding: 17px 16px 17px 16px;
     width: 48px;
     height: 48px;
-    border: #E5E5E5;
-    border-style: solid;
+    border: 2px solid #E5E5E5;
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    transition: all 0.5s;
 }
 
-.button-transparent.button-view:hover {
-    border:#000000;
+.button-view:hover {
+    border:2px solid #000000;
 }
 
 .view-type {
@@ -797,10 +884,16 @@ img {
     justify-content: start;
     list-style: none;
     gap: 6px;
+    position: relative;
 }
 
 .star {
-    background-image: url("./images/pics/star.svg");
+    display: block;
+
+    width: 18px;
+    height: 17px;
+    background-image: url("../images/pics/star.svg");
+    color: #83B3D3;
     background-repeat: no-repeat;
 }
 
