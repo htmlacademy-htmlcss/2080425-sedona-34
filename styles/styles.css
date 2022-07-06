@@ -219,12 +219,6 @@ img {
     padding: 9px 15px 8px 15px;
 }
 
-.button-big {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 36px;
-}
-
 .button-accept {
     min-height: 48px;
 }
@@ -267,6 +261,14 @@ img {
     background-color: #82B3D3;
     border: none;
     font-weight: 700;
+}
+
+.button-big {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    min-width: 200px;
+    border-radius: 0px 10px 10px 0px;
 }
 
 .button-action:hover,.button-action:focus {
@@ -444,7 +446,15 @@ img {
     padding: 0;
     margin: 0;
     width: 800px;
+}
 
+input#newsletter-email {
+    display: flex;
+    width: 600px;
+    border-radius: 10px 0px 0px 10px;
+    border: 0 transparent;
+    padding-left: 22px;
+    background-color: #F2F2F2;
 }
 
 .reason-title {
