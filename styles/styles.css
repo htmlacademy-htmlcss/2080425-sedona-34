@@ -391,6 +391,7 @@ position: relative;
     background-repeat: no-repeat;
     background-color: #5f9ea0;
     margin-bottom: 63px;
+    clip-path: polygon(0 0, 100% 0, 100% 88.2%, 79.2% 93.2%, 79.2% 88.2%, 50% 100%, 20.8% 88.2%, 20.8% 93.2%, 0 88.2%);
 }
 
 .welcome-logo {
@@ -1358,3 +1359,48 @@ line-height: 21px;
     outline: 2px solid #83b3d3;
     box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
   }
+
+/* Модальное окно */
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    background: rgba(242, 242, 242, 0.8);
+}
+
+.modal-search {
+    position: relative;
+    margin: auto;
+    padding: 62px 70px 70px 70px;
+    background-color: #ffffff;
+    width: 715px;
+    border-radius: 30px;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.modal-close-button {
+    position: absolute;
+    padding: 0;
+    top: 28px;
+    right: 44px;
+    width: 53px;
+    height: 53px;
+    background-color: #F2F2F2;
+    border-radius: 50%;
+    border: none;
+    background-image: url("../images/pics/cross.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.modal-title {
+    display: inline-block;
+    width: 460px;
+    text-align: start;
+}
