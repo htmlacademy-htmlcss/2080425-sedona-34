@@ -728,7 +728,7 @@ position: relative;
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 15px;
 }
 
 .catalog-filter {
@@ -748,6 +748,9 @@ position: relative;
 
 .catolog-filter-item {
     max-width: 150px;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
 }
 
 .catalog-filter-main {
@@ -763,7 +766,7 @@ position: relative;
     font-size: 20px;
     line-height: 26px;
     max-width: 150px;
-    padding: 0 0 30px 0;
+    /* padding: 0 0 30px 0; */
 }
 
 .catalog-filter-group {
@@ -771,6 +774,83 @@ position: relative;
     margin: 0;
     padding: 0;
 }
+
+/* чекбоксы */
+
+.control {
+    position: relative;
+    display: block;
+    margin-left: 40px;
+    outline: none;
+}
+
+.control-input {
+
+}
+
+.control-mark,
+.control-mark-radio {
+    position: absolute;
+    top: 5px;
+    left: -40px;
+    width: 20px;
+    height: 20px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+}
+
+.control-mark:hover,
+.control-mark:focus {
+    opacity: 0.6;
+}
+
+.control-mark:active {
+    opacity: 0.3;
+}
+
+.control-mark:focus {
+    outline: 3px solid #83B3D3;
+}
+
+.control-mark-radio {
+    border-radius: 50%;
+}
+
+.control-label {
+padding: 0;
+margin: 0;
+
+}
+
+/* .control:hover .control-mark {
+    border-color: #814b18;
+}
+
+  .control-input:disabled + .control-mark {
+    border-color: #242424;
+  } */
+
+  .control-input[type="checkbox"]:checked + .control-mark::before,
+  .control-input[type="checkbox"]:checked + .control-mark::after {
+    position: absolute;
+    top: -5px;
+    left: 4px;
+    content: url("../images/pics/check.svg");
+  }
+
+  .control-input[type="radio"]:checked + .control-mark-radio::before,
+  .control-input[type="radio"]:checked + .control-mark-radio::after {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3F5E72;
+  }
+
+/* чекбоксы */
 
 .price-and-buttons {
     display: flex;
@@ -780,6 +860,32 @@ position: relative;
     min-height: 148px;
     align-items: end;
 }
+
+.price {
+    display: flex;
+    flex-direction: column;
+}
+
+.range-wrapper-inputs {
+    width: 288px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.range-input {
+    width: 144px;
+    boder: 2px solid #FFFFFF;
+    border-radius: 4px;
+}
+
+.range-scale {
+    position: relative;
+    height: 4px;
+    margin-bottom: 16px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+  }
 
 .filter-buttons {
     width: 160px;
@@ -799,7 +905,8 @@ position: relative;
 
 
 
-.text-description {
+.text-description,
+.contol-label {
     font-size: 18px;
     line-height: 21px;
     margin: 0;
@@ -838,6 +945,7 @@ position: relative;
     justify-content: center;
     transition: all 0.5s;
     position: relative;
+    outline: none;
 }
 
 .button-view:nth-child(1)::after,
@@ -881,6 +989,7 @@ position: relative;
     border: 2px solid #E5E5E5;
     border-radius: 4px;
     padding-left: 10px;
+    outline: none;
 }
 
 
@@ -1053,6 +1162,7 @@ position: relative;
     border-radius: 4px;
     margin: 0;
     padding-left: 10px;
+    outline: none;
 }
 
 .select-control:hover,
@@ -1077,3 +1187,134 @@ position: relative;
     border: 2px solid rgba(0, 0, 0, 0.3);
     color: rgba(0, 0, 0, 0.3);
 }
+
+
+/* stolen and semirecycled */
+
+.filter-price {
+    width: 288px;
+  }
+
+ .catalog-filter-title,
+ .filter-price {
+    margin-bottom: 34px;
+  }
+
+  .range-wrapper-inputs {
+    display: flex;
+    margin-bottom: 28px;
+  }
+
+  .price-range {
+    position: relative;
+  }
+
+  .price-range-min {
+    margin-right: -1px;
+  }
+
+  .price-range-max {
+    margin-left: -1px;
+  }
+
+  .price-input {
+    font-family: inherit;
+    font-size: inherit;
+    color: #ffffff;
+    width: 145px;
+    height: 48px;
+    padding: 14px 40px 13px 17px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+  }
+
+  .price-input-min {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .price-input-max {
+    border-radius: 0 4px 4px 0;
+  }
+
+  .price-input:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .price-input:focus {
+    position: relative;
+    box-shadow: 0 0 0 3px #81b3d2,
+                0 0 0 3px #81b3d2 inset;
+    outline: none;
+    z-index: 1;
+  }
+
+  .price-input:not(:placeholder-shown) {
+    background-color: #756257;
+  }
+
+  .price-input::placeholder {
+    color: #ffffff;
+  }
+
+  .price-input::-webkit-outer-spin-button,
+  .price-input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  .price-input-placeholder {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.3);
+    line-height: 23px;
+    width: 17px;
+    height: 23px;
+    right: 17px;
+    top: 11px;
+    z-index: 2;
+  }
+
+  .range-scale {
+    position: relative;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .range-bar {
+    position: absolute;
+    height: 4px;
+    background-color: #ffffff;
+  }
+
+  .range-toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .toggle-min {
+    top: -8px;
+    left: 0;
+  }
+
+  .toggle-max {
+    top: -8px;
+    right: -11px;
+  }
+
+  .range-toggle:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .range-toggle:focus-visible {
+    outline: 3px solid #83b3d3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .range-toggle:active {
+    outline: 2px solid #83b3d3;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+  }
