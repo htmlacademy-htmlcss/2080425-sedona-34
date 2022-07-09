@@ -1363,6 +1363,7 @@ line-height: 21px;
 /* Модальное окно */
 
 .modal-container {
+    font-family: "PT Sans";
     position: fixed;
     top: 0;
     left: 0;
@@ -1386,8 +1387,8 @@ line-height: 21px;
 .modal-close-button {
     position: absolute;
     padding: 0;
-    top: 28px;
-    right: 44px;
+    top: 53px;
+    right: 69px;
     width: 53px;
     height: 53px;
     background-color: #F2F2F2;
@@ -1403,4 +1404,109 @@ line-height: 21px;
     display: inline-block;
     width: 460px;
     text-align: start;
+    margin: 0;
+    margin-bottom: 63px;
+    padding: 0;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.dates-wrapper,
+.human-counter,
+.adult-wrapper,
+.infant-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+.adult-wrapper {
+    width: 288px;
+}
+
+.infant-wrapper {
+    width: 230px;
+}
+
+.modal-form-title {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+
+}
+
+.dates-field,
+.human-counter {
+    margin: 0;
+}
+
+.field,
+.small-field {
+    width: 420px;
+    background-color: #F2F2F2;
+    padding: 15px 50px 14px 19px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.field-small {
+    border-radius: 4px;
+    background-color: #F2F2F2;
+    padding: 15px auto 14px auto;
+    text-align: center;
+    width: 133px;
+    height: 50px;
+    border: none;
+    font-size: 18px;
+    font-weight: 21px;
+    color:#000000;
+}
+
+.infant-counter-field {
+
+}
+
+.button-modal {
+    width: 575px;
+    padding: 12px 26px 12px 26px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.adult-counter-field::-webkit-outer-spin-button,
+.adult-counter-field::-webkit-inner-spin-button,
+.infant-counter-field::-webkit-inner-spin-button,
+.infant-counter-field::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;}
+
+.date-in-field {
+    position: relative;
+}
+
+.date-in-field::after {
+    position: absolute;
+    content: text("Мы не можем отправить вас в прошлое.");
+    color: #FF5757;
+    top: 50px;
+    left: 10px;
 }

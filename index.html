@@ -165,7 +165,39 @@
           <span class="visually-hidden">Закрыть</span>
         </button>
         <section class="modal-content">
-          <h2 class="modal-title">Личный кабинет</h2>
+          <h2 class="modal-title">поиск гостиниц в седоне</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
+            <div class="dates-wrapper">
+              <span class="modal-form-title">Дата Заезда:</span>
+              <p class="dates-field">
+                <label class="visually-hidden" for="date-in">дата заезда</label>
+                <input class="date-in-field field" type="text" id="date-in" name="date-in" placeholder="27 апреля 2020">
+              </p>
+            </div>
+            <div class="dates-wrapper">
+              <span class="modal-form-title">Дата Выезда:</span>
+              <p class="dates-field">
+                <label class="visually-hidden" for="date-out">дата выезда</label>
+                <input class="date-out-field field" type="text" id="date-out" name="date-out" placeholder="1 сентября 2021">
+              </p>
+            </div>
+            <div class="human-counter">
+              <div class="adult-wrapper">
+                <span class="modal-form-title">Взрослые:</span>
+                <p class="human-counter">
+                <label class="visually-hidden" for="adult-counter">колическтво взрослых</label>
+                <input class="adult-counter-field field-small" type="number" id="adult-counter" name="adult-counter" placeholder="2" >
+                </p>
+              </div>
+              <div class="infant-wrapper">
+                <span class="modal-form-title">Дети:</span>
+                <p class="human-counter">
+                <label class="visually-hidden" for="adult-counter">колическтво несовершеннолетних</label>
+                <input class="infant-counter-field field-small" type="number" id="infant-counter" name="infant-counter" placeholder="1">
+                </p>
+              </div>
+            </div>
+            <button class="button button-action button-modal" type="submit">Найти</button>
         </section>
       </div>
     </div>
