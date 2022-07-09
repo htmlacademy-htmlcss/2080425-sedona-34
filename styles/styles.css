@@ -79,8 +79,9 @@ img {
 
 .logo-img:hover,
 .logo-img:focus {
-    stroke: #756257;
-    stroke-width: 2px;
+    fill:#7aa8c5;
+    /* stroke: #756257;
+    stroke-width: 2px; */
 }
 
 .page-header {
@@ -132,6 +133,23 @@ img {
     margin-left: 20px;
 }
 
+.search,
+.favourite {
+    fill: #000000;
+    position: relative;
+}
+
+.favourite:hover,
+.favourite:focus,
+.search:hover,
+.search:focus {
+    fill: #756257;
+}
+
+.navigation-link-favorite {
+    position: relative;
+}
+
 .navigation-link-favorite::after {
     content: "12";
     color: #FFFFFF;
@@ -139,8 +157,8 @@ img {
     font-size: 10px;
     line-height: 11px;
     font-weight: 400;
-    top: 1px;
-    right: -4px;
+    top: 14px;
+    right: -3px;
     letter-spacing: -0.7px;
     display: flex;
     justify-content: center;
@@ -157,7 +175,8 @@ img {
     padding: 0;
 }
 
-.navigation-link {
+.navigation-link,
+.navigation-link-current {
     font-size: 20px;
     text-transform: capitalize;
     display: block;
@@ -168,17 +187,15 @@ img {
     position: relative;
 }
 
-.navigation-list-additional .navigation-item:nth-child(1) .navigation-link {
-    background-image: url("../images/pics/search.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+.navigation-link-icon {
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
-.navigation-list-additional .navigation-item:nth-child(2) .navigation-link {
-    background-image: url("../images/pics/favorite.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+.navigation-link-current {
+    cursor: default;
 }
+
 .page-navigation .navigation-item {
 position: relative;
 }
@@ -248,26 +265,33 @@ position: relative;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
+    width: 100px;
+    min-height: 32px;
     color: #FFFFFF;
     background-color: transparent;
     border: none;
     text-decoration: none;
     cursor: pointer;
+    display: inline-block;
+    margin: 0 auto;
 }
 
-.button-transparent:hover,
-.button-transparent:focus {
+.button-transparent:hover {
     opacity: 0.6;
-}
-
-.button-transparent:focus {
-    border: 2px #83B3D3;
-    border-radius: 4px;
 }
 
 .button-transparent:active {
     opacity: 0.3;
+    outline: none;
 }
+
+.button-transparent:focus-visible {
+    outline: 3px solid #83B3D3;
+    border-radius: 4px;
+}
+
+
+
 
 .button-rating {
     color: #333333;
@@ -457,7 +481,8 @@ position: relative;
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 29px;
-    color: #000000;
+    /* color: #000000; */
+    color: inherit;
 }
 
 .newsletter {
@@ -717,9 +742,8 @@ position: relative;
     color: #FFFFFF;
     background-color: #82B3D3;
     max-width: 1200px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 55px auto;
     padding: 35px 70px 70px 70px;
-    margin-bottom: 55px;
 }
 
 .catalog-filter-list {
@@ -728,7 +752,7 @@ position: relative;
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .catalog-filter {
@@ -820,7 +844,7 @@ position: relative;
 .control-label {
 padding: 0;
 margin: 0;
-
+line-height: 21px;
 }
 
 /* .control:hover .control-mark {
@@ -860,6 +884,7 @@ margin: 0;
     width: 518px;
     min-height: 148px;
     align-items: end;
+    margin-bottom: 0;
 }
 
 .price {
@@ -872,6 +897,7 @@ margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
+
 }
 
 .range-input {
@@ -883,7 +909,7 @@ margin: 0;
 .range-scale {
     position: relative;
     height: 4px;
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
     background-color: #FFFFFF;
     border-radius: 2px;
   }
@@ -892,7 +918,7 @@ margin: 0;
     width: 160px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 7px;
 }
 
 .catalog-visualization {
@@ -980,6 +1006,8 @@ margin: 0;
     border:2px solid #68A2CA;
 }
 
+
+
 .select-control {
     width: 290px;
     height: 49px;
@@ -991,6 +1019,10 @@ margin: 0;
     border-radius: 4px;
     padding-left: 10px;
     outline: none;
+    background-image: url("../images/pics/arrow_select.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    appearance: none;
 }
 
 
@@ -1164,6 +1196,10 @@ margin: 0;
     margin: 0;
     padding-left: 10px;
     outline: none;
+    background-image: url("../images/pics/arrow_select.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    appearance: none;
 }
 
 .select-control:hover,
@@ -1194,11 +1230,14 @@ margin: 0;
 
 .filter-price {
     width: 288px;
+    min-height: 148px;
+    /* display: flex;
+    justify-content: space-between;
+    padding: 0; */
   }
 
- .catalog-filter-title,
- .filter-price {
-    margin-bottom: 34px;
+ .catalog-filter-title {
+    margin-bottom: 30px;
   }
 
   .range-wrapper-inputs {
