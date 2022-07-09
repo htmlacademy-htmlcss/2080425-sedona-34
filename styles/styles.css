@@ -808,7 +808,7 @@ position: relative;
     opacity: 0.3;
 }
 
-.control-mark:focus {
+.control-input:focus + .control-mark{
     outline: 3px solid #83B3D3;
 }
 
