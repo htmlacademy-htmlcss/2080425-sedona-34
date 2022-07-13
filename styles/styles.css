@@ -464,13 +464,14 @@ img {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  padding:0 290px;
+  padding: 0 290px;
   margin-top: 0;
   text-align: center;
 }
 
 .invite-title {
   padding: 0;
+  margin-bottom: 28px;
 }
 
 .advantages {
@@ -558,12 +559,14 @@ img {
 
 .invite {
   margin-bottom: 93px;
-  padding-left: 300px;
-  padding-right: 305px;
+  padding-left: 304px;
+  padding-right: 304px;
 }
 
 .invite-description {
-  margin-bottom:55px;
+  margin: 0;
+  width: 592px;
+  margin-bottom:56px;
 }
 
 .newsletter-title {
@@ -762,7 +765,7 @@ img {
   list-style: none;
   margin: auto;
   padding: 0;
-  padding-top: 6px;
+  padding-top: 8px;
   font-size: 40px;
   line-height: 40px;
   max-width: 800px;
