@@ -452,10 +452,21 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #5f9ea0;
-  margin-bottom: 58px;
+  margin-bottom: 63px;
+  max-height: 485px;
   position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 88.2%, 79.2% 93.2%, 79.2% 88.2%, 50% 100%, 20.8% 88.2%, 20.8% 93.2%, 0 88.2%);
-  clip-path: polygon(0 0, 100% 0, 100% 88.2%, 79.2% 93.2%, 79.2% 88.2%, 50% 100%, 20.8% 88.2%, 20.8% 93.2%, 0 88.2%);
+  /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 88.2%, 79.2% 93.2%, 79.2% 88.2%, 50% 100%, 20.8% 88.2%, 20.8% 93.2%, 0 88.2%); */
+  clip-path: polygon(
+		0% 0%,
+		0% 88%,
+		21% 93%,
+		21% 88%,
+		50% 100%,
+		79% 88%,
+		79% 93%,
+		100% 88%,
+		100% 0%
+	);
 }
 
 .welcome-logo {
@@ -475,7 +486,7 @@ img {
 
 .invite-title {
   padding: 0;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
 }
 
 .advantages {
@@ -583,7 +594,7 @@ img {
   line-height: 36px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 28px;
   color: inherit;
 }
 
@@ -671,6 +682,7 @@ img {
 .newsletter-description {
   width: 500px;
   margin: 0 auto 46px;
+  padding-left: 3px;
 }
 
 .main-reason-img {
