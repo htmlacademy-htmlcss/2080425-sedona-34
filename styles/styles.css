@@ -343,7 +343,7 @@ img {
 .button-rating {
   color: #333333;
   background-color: #f2f2f2;
-  width: 140px;
+  width: 100%;
   min-height: 37px;
   margin: 0;
   padding: 8px 22px 9px 23px;
@@ -1669,7 +1669,7 @@ input[type='number'] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: none;
+  /* display: none; */
   width: 100%;
   height: 100%;
   z-index: 11;
@@ -1742,8 +1742,7 @@ input[type='number'] {
 }
 
 .modal-close-button:active {
-  opacity: 0.3;
-  background-color: #a6a5a5;
+  background-image: url("../images/pictures/cross-act.svg");
 }
 
 .modal-title {
@@ -1883,15 +1882,37 @@ input[type='number'] {
   position: absolute;
   content: "";
   padding: 0;
-  background-image: url("../images/pictures/info-icon.svg");
+  /* background-image: url("../images/pictures/info-icon.svg"); */
+  background-color: #83B3D3;
+  border-radius: 50%;
   width: 25px;
   height: 25px;
   right: 152px;
   top: 13px;
 }
 
+.modal-info-wpapper::before {
+  content: "";
+  background-color: #ffffff;
+  width: 1px;
+  height: 6px;
+  position: absolute;
+  top: 11px;
+  left: 12px;
+}
+
+.modal-info-wpapper::after {
+  content: "";
+  background-color: #ffffff;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 8px;
+  left: 12px;
+}
+
 .modal-info-wpapper:hover {
-  background-image: url("../images/pictures/info-icon-hover.svg");
+  background-color: #68A2CA;
 }
 
 .field::-webkit-input-placeholder {
