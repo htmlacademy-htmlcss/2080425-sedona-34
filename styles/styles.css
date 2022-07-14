@@ -294,7 +294,7 @@ img {
   color: rgba(255, 255, 255, 30%);
 }
 
-.button:not([disabled]):disabled {
+.button:disabled {
   background-color: #e5e5e5;
 }
 
@@ -997,6 +997,8 @@ img {
   height: 20px;
   background-color: #ffffff;
   border-radius: 4px;
+  content: "";
+  display: block;
 }
 
 .control-mark-radio {
@@ -1024,12 +1026,21 @@ img {
   line-height: 21px;
 }
 
+.control-label:hover ~ .control-mark {
+  opacity: 0.6;
+}
+
 .control-input[type="checkbox"]:checked + .control-mark::before,
 .control-input[type="checkbox"]:checked + .control-mark::after {
   position: absolute;
   top: -5px;
   left: 4px;
   content: url("../images/pictures/check.svg");
+}
+
+.control-input:hover ~ .control-mark,
+.control-input:hover ~ .control-mark-radio {
+  opacity: 0.6;
 }
 
 .control-input[type="radio"]:checked + .control-mark-radio::before,
@@ -1115,6 +1126,7 @@ img {
 
 .view-type {
   min-width: 160px;
+  max-width: 220px;
   height: 48px;
   margin-left: 78px;
   display: flex;
@@ -1125,10 +1137,11 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: flex-start;
+  align-items: flex-end;
   position: relative;
+  gap: 8px;
 }
 
 .button-view {
@@ -1297,6 +1310,7 @@ img {
   list-style: none;
   gap: 6px;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .star {
@@ -1659,7 +1673,7 @@ input[type='number'] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* display: none; */
+  display: none;
   width: 100%;
   height: 100%;
   z-index: 11;
