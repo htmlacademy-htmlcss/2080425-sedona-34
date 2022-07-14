@@ -1,5 +1,5 @@
 @font-face {
-	font-family: "PT Sans", sans-serif;
+	font-family: "PT Sans";
 	font-style: normal;
 	font-weight: 400;
 	src: url("../fonts/ptsans-400.woff2") format("woff2");
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-	font-family: "PT Sans"sans-serif;;
+	font-family: "PT Sans";
 	font-style: normal;
 	font-weight: 700;
 	src: url("../fonts/ptsans-700.woff2") format("woff2");
@@ -290,10 +290,6 @@ img {
   cursor: pointer;
 }
 
-.button:active {
-  color: rgba(255, 255, 255, 30%);
-}
-
 .button:disabled {
   background-color: #e5e5e5;
 }
@@ -322,16 +318,16 @@ img {
   margin: 0 auto;
 }
 
-.button-transparent:hover {
+.button-transparent:not([disabled]):hover {
   opacity: 0.6;
 }
 
-.button-transparent:active {
+.button-transparent:not([disabled]):active {
   opacity: 0.3;
   outline: none;
 }
 
-.button-transparent:focus-visible {
+.button-transparent:not([disabled]):focus-visible {
   outline: 3px solid #83b3d3;
   border-radius: 4px;
 }
@@ -347,7 +343,7 @@ img {
 .button-rating {
   color: #333333;
   background-color: #f2f2f2;
-  width: 140px;
+  width: 100%;
   min-height: 37px;
   margin: 0;
   padding: 8px 22px 9px 23px;
@@ -375,21 +371,21 @@ img {
   padding: 12px 14px 12px 13px;
 }
 
-.button-header:hover,
-.button-header:focus,
-.button-under:hover,
-.button-under:focus,
-.invite-button:hover,
-.invite-button:focus {
+.button-header:not([disabled]):hover,
+.button-header:not([disabled]):focus,
+.button-under:not([disabled]):hover,
+.button-under:not([disabled]):focus,
+.invite-button:not([disabled]):hover,
+.invite-button:not([disabled]):focus {
   background-color: #615048;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-.button-header:active,
-.button-under:active,
-.invite-button:active {
+.button-header:not([disabled]):active,
+.button-under:not([disabled]):active,
+.invite-button:not([disabled]):active {
   background-color: #756157;
 }
 
@@ -399,15 +395,15 @@ img {
   font-weight: 700;
 }
 
-.button-action:hover,
-.button-action:focus {
+.button-action:not([disabled]):hover,
+.button-action:not([disabled]):focus {
   background-color: #68a2ca;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-.button-action:active {
+.button-action:not([disabled]):active {
   background-color: #82b3d3;
 }
 
@@ -416,15 +412,15 @@ img {
   border: none;
 }
 
-.button-favourite:hover,
-.button-favourite:focus {
+.button-favourite:not([disabled]):hover,
+.button-favourite:not([disabled]):focus {
   background-color: #6c9e42;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-.button-favourite:active {
+.button-favourite:not([disabled]):active {
   background-color: #7db54f;
 }
 
@@ -455,7 +451,6 @@ img {
   margin-bottom: 63px;
   max-height: 485px;
   position: relative;
-  /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 88.2%, 79.2% 93.2%, 79.2% 88.2%, 50% 100%, 20.8% 88.2%, 20.8% 93.2%, 0 88.2%); */
   clip-path: polygon(
 		0% 0%,
 		0% 88%,
@@ -549,7 +544,7 @@ img {
 }
 
 .reasons .reason-subitem:nth-child(1):before {
-  content: url("../images/pics/house.svg");
+  content: url("../images/pictures/house.svg");
   position: absolute;
   top: 80px;
   width: 75px;
@@ -557,7 +552,7 @@ img {
 }
 
 .reasons .reason-subitem:nth-child(2):before {
-  content: url("../images/pics/food.svg");
+  content: url("../images/pictures/food.svg");
   position: absolute;
   top: 82px;
   width: 74px;
@@ -565,7 +560,7 @@ img {
 }
 
 .reasons .reason-subitem:nth-child(3):before {
-  content: url("../images/pics/present.svg");
+  content: url("../images/pictures/present.svg");
   position: absolute;
   top: 78px;
   width: 64px;
@@ -580,7 +575,6 @@ img {
 
 .invite-description {
   margin: 0;
-  /* width: 592px; */
   margin-bottom:56px;
   padding: 0;
   padding-left: 85px;
@@ -863,7 +857,7 @@ img {
 }
 
 .breadcrumbs-item:not(:nth-child(1))::before {
-  content: url("../images/pics/arrow.svg");
+  content: url("../images/pictures/arrow.svg");
   width: 5px;
   height: 8px;
   position: relative;
@@ -999,6 +993,8 @@ img {
   height: 20px;
   background-color: #ffffff;
   border-radius: 4px;
+  content: "";
+  display: block;
 }
 
 .control-mark-radio {
@@ -1017,6 +1013,7 @@ img {
 .control-input:focus + .control-mark,
 .control-input:focus + .control-mark-radio {
   outline: 3px solid #83b3d3;
+  opacity: 0.6;
 }
 
 .control-label {
@@ -1025,12 +1022,21 @@ img {
   line-height: 21px;
 }
 
+.control-label:hover ~ .control-mark {
+  opacity: 0.6;
+}
+
 .control-input[type="checkbox"]:checked + .control-mark::before,
 .control-input[type="checkbox"]:checked + .control-mark::after {
   position: absolute;
   top: -5px;
   left: 4px;
-  content: url("../images/pics/check.svg");
+  content: url("../images/pictures/check.svg");
+}
+
+.control-input:hover ~ .control-mark,
+.control-input:hover ~ .control-mark-radio {
+  opacity: 0.6;
 }
 
 .control-input[type="radio"]:checked + .control-mark-radio::before,
@@ -1115,7 +1121,8 @@ img {
 }
 
 .view-type {
-  width: 160px;
+  min-width: 160px;
+  max-width: 220px;
   height: 48px;
   margin-left: 78px;
   display: flex;
@@ -1126,10 +1133,11 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: flex-end;
   position: relative;
+  gap: 8px;
 }
 
 .button-view {
@@ -1152,13 +1160,17 @@ img {
   outline: none;
 }
 
+.button-view-current {
+  border: 2px solid #000000;
+}
+
 .button-view:nth-child(1)::after,
 .button-view:nth-child(2)::after,
 .button-view:nth-child(3)::after {
   content: "";
   width: 16px;
   height: 14px;
-  background-image: url("../images/pics/grid-view.svg");
+  background-image: url("../images/pictures/grid-view.svg");
   background-repeat: no-repeat;
   left: 15px;
   top: 15px;
@@ -1166,19 +1178,19 @@ img {
 }
 
 .button-view:nth-child(2)::after {
-  background-image: url("../images/pics/slideshow-view.svg");
+  background-image: url("../images/pictures/slideshow-view.svg");
 }
 
 .button-view:nth-child(3)::after {
-  background-image: url("../images/pics/list-view.svg");
+  background-image: url("../images/pictures/list-view.svg");
 }
 
-.button-view:hover,
-.button-view:active {
+.button-view:not([disabled]):hover,
+.button-view:not([disabled]):active {
   border: 2px solid #000000;
 }
 
-.button-view:focus {
+.button-view:not([disabled]):focus {
   border: 2px solid #68a2ca;
 }
 
@@ -1195,7 +1207,7 @@ img {
   padding-left: 10px;
   padding-right: 35px;
   outline: none;
-  background-image: url("../images/pics/arrow_select.svg");
+  background-image: url("../images/pictures/arrow-select.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
   -webkit-appearance: none;
@@ -1294,13 +1306,14 @@ img {
   list-style: none;
   gap: 6px;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .star {
   display: block;
   width: 18px;
   height: 17px;
-  background-image: url("../images/pics/star.svg");
+  background-image: url("../images/pictures/star.svg");
   color: #83b3d3;
   background-repeat: no-repeat;
 }
@@ -1330,6 +1343,7 @@ img {
   flex-direction: row;
   list-style: none;
   width: 400px;
+  flex-wrap: wrap;
   gap: 8px;
   margin: 0;
   padding: 0;
@@ -1423,7 +1437,7 @@ img {
   padding-top: auto;
   padding-bottom: auto;
   outline: none;
-  background-image: url("../images/pics/arrow_select.svg");
+  background-image: url("../images/pictures/arrow-select.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
   -webkit-appearance: none;
@@ -1655,7 +1669,7 @@ input[type='number'] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: none;
+  /* display: none; */
   width: 100%;
   height: 100%;
   z-index: 11;
@@ -1694,7 +1708,7 @@ input[type='number'] {
   background-color: #f2f2f2;
   border: none;
   border-radius: 50%;
-  background-image: url("../images/pics/cross.svg");
+  background-image: url("../images/pictures/cross.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -1728,8 +1742,7 @@ input[type='number'] {
 }
 
 .modal-close-button:active {
-  opacity: 0.3;
-  background-color: #a6a5a5;
+  background-image: url("../images/pictures/cross-act.svg");
 }
 
 .modal-title {
@@ -1869,15 +1882,37 @@ input[type='number'] {
   position: absolute;
   content: "";
   padding: 0;
-  background-image: url("../images/pics/info-icon.svg");
+  /* background-image: url("../images/pictures/info-icon.svg"); */
+  background-color: #83B3D3;
+  border-radius: 50%;
   width: 25px;
   height: 25px;
   right: 152px;
   top: 13px;
 }
 
+.modal-info-wpapper::before {
+  content: "";
+  background-color: #ffffff;
+  width: 1px;
+  height: 6px;
+  position: absolute;
+  top: 11px;
+  left: 12px;
+}
+
+.modal-info-wpapper::after {
+  content: "";
+  background-color: #ffffff;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 8px;
+  left: 12px;
+}
+
 .modal-info-wpapper:hover {
-  background-image: url("../images/pics/info-icon-hover.svg");
+  background-color: #68A2CA;
 }
 
 .field::-webkit-input-placeholder {
@@ -1897,7 +1932,7 @@ input[type='number'] {
 
 .calendar {
   position: absolute;
-  background-image: url("../images/pics/calendar.svg");
+  background-image: url("../images/pictures/calendar.svg");
   background-repeat: no-repeat;
   border-radius: 2px;
   border: none;
@@ -1936,36 +1971,36 @@ input[type='number'] {
 }
 
 .adult-wrapper .human-reduce-button {
-  background-image: url("../images/pics/minus.svg");
+  background-image: url("../images/pictures/minus.svg");
   top: 14px;
   right: 98px;
 }
 
 .adult-wrapper .human-add-button {
-  background-image: url("../images/pics/plus.svg");
+  background-image: url("../images/pictures/plus.svg");
   top: 14px;
   right: 16px;
 }
 
 .infant-wrapper .human-reduce-button {
-  background-image: url("../images/pics/minus.svg");
+  background-image: url("../images/pictures/minus.svg");
   top: 14px;
   right: 98px;
 }
 
 .infant-wrapper .human-add-button {
-  background-image: url("../images/pics/plus.svg");
+  background-image: url("../images/pictures/plus.svg");
   top: 14px;
   right: 16px;
 }
 
-.human-count-button:hover,
-.human-count-button:focus-visible {
+.human-count-button:not([disabled]):hover,
+.human-count-button:not([disabled]):focus-visible {
   opacity: 1;
   border-radius: 3px;
 }
 
-.human-count-button:active {
+.human-count-button:not([disabled]):not([disabled]):active {
   opacity: 0.3;
 }
 
