@@ -290,10 +290,6 @@ img {
   cursor: pointer;
 }
 
-.button:not([disabled]):active {
-  color: rgba(255, 255, 255, 30%);
-}
-
 .button:disabled {
   background-color: #e5e5e5;
 }
